@@ -131,12 +131,12 @@ rm "$CACHE_DIR"/bundle.tar.gz
 
 ## phantomjs
 
-PHANTOMJSVERSION="1.9.0"
+PHANTOMJSVERSION="1.9.2"
 S3_BUCKET="stomita-buildpack-phantomjs"
 
 # s3 packages
 FILE_NAME="buildpack-phantomjs-${PHANTOMJSVERSION}.tar.gz"
-BUILDPACK_PHANTOMJS_PACKAGE="http://${S3_BUCKET}.s3.amazonaws.com/${FILE_NAME}"
+BUILDPACK_PHANTOMJS_PACKAGE="https://www.dropbox.com/s/oksbchk9fq0v246/buildpack-phantomjs-1.9.2.tar.gz"
 
 echo "-----> PhantomJS version: ${PHANTOMJSVERSION}"
 
