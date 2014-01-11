@@ -11,6 +11,12 @@ heroku create <appname> --stack cedar --region eu --buildpack  https://github.co
 ```
 
 ```bash
+heroku addons:add mongolab
+```
+
+To get MONGO_URL: `heroku config`
+
+```bash
 heroku config:set MONGO_URL=mongodb://<username>:<password>@ds027308.mongolab.com:27308/<dbname>
 ```
 
@@ -21,7 +27,14 @@ Then `git push` to heroku as usual.
 You need to set the `ROOT_URL` environment variable:
 
 ```bash
-heroku config:add ROOT_URL=your.domain.com
+heroku config:add ROOT_URL=http://your.domain.com
+```
+
+If you are not running this as a fresh buildpack you will need to setup the environment paths correctly:
+
+```bash
+heroku config:add LD_LIBRARY_PATH=/usr/local/lib:/usr/lib:/lib:/app/vendor/phantomjs/lib
+heroku config:add PATH=bin:.meteor/heroku_build/bin:node_modules/.bin:/usr/local/bin:/usr/bin:/bin:/app/vendor/phantomjs/bin
 ```
 
 You can specify meteor settings by setting the `METEOR_SETTINGS` environment variable:
