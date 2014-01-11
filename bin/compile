@@ -131,7 +131,7 @@ rm "$CACHE_DIR"/bundle.tar.gz
 
 ## phantomjs
 
-PHANTOMJSVERSION="1.9.0"
+PHANTOMJSVERSION="1.9.2"
 S3_BUCKET="goette-buildpack-phantomjs"
 
 # s3 packages
