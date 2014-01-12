@@ -55,4 +55,4 @@ If you need PhantomJS to make the spiderable package work, the easiest way i fou
 * Push to Heroku
 * Add it to your PATH like that `heroku config:set PATH="/usr/local/bin:/usr/bin:/bin:/app/bin`
 
-To verify PhantomJS in deed is in your path on Heroku - and therefore accesible to the spiderable package - run `heroku run 'phantomjs'`.
+To verify that PhantomJS is indeed in your path on Heroku - and therefore accesible to the spiderable package - run `heroku run 'phantomjs'`.
