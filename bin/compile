@@ -129,27 +129,6 @@ rm "$CACHE_DIR"/bundle.tar.gz
 ############################################
 ############################################
 
-## phantomjs
-
-# PHANTOMJSVERSION="1.9.0"
-# S3_BUCKET="goette-buildpack-phantomjs"
-
-# # s3 packages
-# FILE_NAME="buildpack-phantomjs-${PHANTOMJSVERSION}.tar.gz"
-# BUILDPACK_PHANTOMJS_PACKAGE="http://${S3_BUCKET}.s3.amazonaws.com/${FILE_NAME}"
-
-# echo "-----> PhantomJS version: ${PHANTOMJSVERSION} from URL http://${S3_BUCKET}.s3.amazonaws.com/${FILE_NAME}"
-
-# mkdir -p $CACHE_DIR
-# if ! [ -e $CACHE_DIR/$FILE_NAME ]; then
-#   echo "-----> Fetching PhantomJS buildpack binaries"
-#   curl $BUILDPACK_PHANTOMJS_PACKAGE -s -o $CACHE_DIR/$FILE_NAME
-# fi
-
-# echo "-----> Extracting PhantomJS binaries"
-# mkdir -p $BUILD_DIR/vendor/phantomjs
-# tar zxf $CACHE_DIR/$FILE_NAME -C $BUILD_DIR/vendor/phantomjs
-
 ############################################
 # Prepare ENV vars
 ############################################
